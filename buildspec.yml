@@ -1,9 +1,15 @@
 version: 0.1
 
 phases:
+  pre_build:
+    commands:
+      - pwd
   build:
     commands:
-      go build
+      - go build
+  post_build:
+    commands:
+      - find .
 
 artifacts:
   files:
